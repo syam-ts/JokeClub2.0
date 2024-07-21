@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>About </title>
+</head>
+<body>
+    <nav>
+        <header class="fixed h-16 inset-x-0 top-0 z-30 mx-auto rounded-full w-full max-w-screen-2xl border bg-white py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
+            <div class="px-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex shrink-0">
+                        <a aria-current="page" class="flex items-center" href="/">
+                            <img class="h-12 w-12 rounded-full" src="https://www.shutterstock.com/image-vector/melting-smile-dripping-icon-yellow-260nw-1600649833.jpg" alt="jokeClub-Logo">
+                            <p class="sr-only">jokeClub-V-2.0</p>
+                        </a>
+                    </div>
+                    <div class=" md:flex md:items-center md:justify-center md:gap-5">
+                        <a aria-current="page" class="inline-block rounded-lg px-12 py-1 text-sm font-thin text-gray-900 transition-all duration-200 hover:bg-yellow-200 hover:text-black" href="/home">Home</a>
+                        <a class="inline-block rounded-lg px-12 py-1 text-sm font-thin text-gray-900 transition-all duration-200 hover:bg-yellow-200 hover:text-black" href="#">Projects</a>
+                        <a class="inline-block rounded-lg px-12 py-1 text-sm font-thin text-gray-900 transition-all duration-200 hover:bg-yellow-200 hover:text-black" href="#">About</a>
+                        <a class="inline-block rounded-lg px-12 py-1 text-sm font-thin text-gray-900 transition-all duration-200 hover:bg-yellow-200 hover:text-black" href="#">Contact</a>
+                    </div>
+                    <div class="flex items-center justify-end gap-3">
+                        <a class="inline-flex items-center justify-center rounded-xl bg-yellow-300 px-3 py-2 text-sm font-semibold text-black shadow-sm transition-all duration-150 hover:bg-sky-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" href="/login">Login</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+       </nav>
+ <!-- main content -->
+    <div id="about" class="relative bg-white overflow-hidden mt-44">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+                    fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                </svg>
+    
+                <div class="pt-1"></div>
+    
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h2 class="my-6 text-2xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-4xl underline">
+                            About JokeClub
+                        </h2>
+    
+                        <p class="italic">
+                           JokeClub version 2.0 is a successor of jokeClub version 0.1.This applicaion have new features
+                           like Darkmode, Google authentication, quick resoponse , Modern paralax ui ,used most popular 
+                           CSS framework ( Tailwind CSS) and used Typescript .Now jokes are easly fetch by just one click
+                           and Ready to Smile!
+                        </p>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full object-fit" src="https://www.usatoday.com/gcdn/presto/2019/01/24/USAT/e1ba58bc-0dcf-4f80-b300-427448e77925-GTY_1027411906.JPG?crop=3119,1754,x0,y322&width=3119&height=1754&format=pjpg&auto=webp" alt="">
+        </div>
+    </div>
+</body>
+</html>
