@@ -51,11 +51,6 @@ const authRoute = require('../src/auth');
 app.use('/auth', authRoute);
 app.use('/dist', express_1.default.static(path_1.default.join(__dirname, '../dist')));
 app.use(express_1.default.static(path_1.default.join(__dirname, '../')));
-const myMiddleware = (req, res, next) => {
-    console.log(req.cookies);
-    next();
-};
-app.use(myMiddleware);
 app.use('/', homeRouter);
 app.use('/', aboutRouter);
 app.use('/', contactRouter);
