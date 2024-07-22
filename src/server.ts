@@ -6,6 +6,7 @@ import cookieSession from 'cookie-session';
 
 dotenv.config();
 
+const homeRouter = require('../routes/home')
 const app = express();
 const port = 3000;
 
@@ -37,9 +38,7 @@ const myMiddleware = (req: Request, res: Response, next: NextFunction) => {
 
 app.use(myMiddleware);
 
-app.get('/', (req: Request, res: Response) => {
-  res.render('home');
-});
+app.use('/',homeRouter)
 
 app.get('/home', (req: Request, res: Response) => {
   res.render('home');
