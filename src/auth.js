@@ -15,7 +15,7 @@ router.get("/google", passport.authenticate("google", { scope: ["email", "profil
 router.get("/google/callback", passport.authenticate("google", {
     failureRedirect: "/login/failed",
 }), function (req, res) {
-    res.redirect("/home"); // redirect to home page after successful login
+    res.redirect("/home"); 
 });
 router.get("/logout", function (req, res) {
     req.logout();

@@ -21,7 +21,7 @@ router.get(
     failureRedirect: "/login/failed",
   }),
   (req, res) => {
-    res.redirect("/home"); // redirect to home page after successful login
+    res.redirect("/home"); 
   }
 );
 

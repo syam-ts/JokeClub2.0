@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = require("express");
 var path_1 = require("path");
 var dotenv = require("dotenv");
-var passport_1 = require("passport");
+var passport = require("passport");
 var cookie_session_1 = require("cookie-session");
 dotenv.config();
 var homeRouter = require('../routes/home');
@@ -18,8 +18,8 @@ app.use((0, cookie_session_1.default)({
     keys: ['randomKey'],
     maxAge: 24 * 60 * 60 * 1000
 }));
-app.use(passport_1.default.initialize());
-app.use(passport_1.default.session());
+app.use(passport.default.initialize());
+app.use(passport.default.session());
 var authRoute = require('../src/auth');
 app.use('/auth', authRoute);
 app.use('/dist', express_1.default.static(path_1.default.join(__dirname, '../dist')));
