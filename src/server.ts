@@ -7,7 +7,6 @@ import cookieSession from 'cookie-session';
 dotenv.config();
 
 const homeRouter = require('../routes/home');
-const projectsRouter = require('../routes/projects');
 const aboutRouter = require('../routes/about');
 const contactRouter = require('../routes/contact');
 const app = express();
@@ -37,7 +36,6 @@ app.use(express.static(path.join(__dirname, '../')));
 app.use('/',homeRouter)
 app.use('/',aboutRouter)
 app.use('/',contactRouter)
-app.use('/',projectsRouter)
 
 
 app.listen(port, () => {

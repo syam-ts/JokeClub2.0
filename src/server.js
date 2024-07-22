@@ -7,7 +7,6 @@ var passport_1 = require("passport");
 var cookie_session_1 = require("cookie-session");
 dotenv.config();
 var homeRouter = require('../routes/home');
-var projectsRouter = require('../routes/projects');
 var aboutRouter = require('../routes/about');
 var contactRouter = require('../routes/contact');
 var app = (0, express_1.default)();
@@ -28,7 +27,6 @@ app.use(express_1.default.static(path_1.default.join(__dirname, '../')));
 app.use('/', homeRouter);
 app.use('/', aboutRouter);
 app.use('/', contactRouter);
-app.use('/', projectsRouter);
 app.listen(port, function () {
     console.log("Server is running on http://localhost:".concat(port));
 });
