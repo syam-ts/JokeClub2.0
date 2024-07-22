@@ -32,6 +32,10 @@ const dotenv = __importStar(require("dotenv"));
 const passport_1 = __importDefault(require("passport"));
 const cookie_session_1 = __importDefault(require("cookie-session"));
 dotenv.config();
+const homeRouter = require('../routes/home');
+const projectsRouter = require('../routes/projects');
+const aboutRouter = require('../routes/about');
+const contactRouter = require('../routes/contact');
 const app = (0, express_1.default)();
 const port = 3000;
 app.set('view engine', 'ejs');
@@ -52,18 +56,10 @@ const myMiddleware = (req, res, next) => {
     next();
 };
 app.use(myMiddleware);
-app.get('/', (req, res) => {
-    res.render('home');
-});
-app.get('/home', (req, res) => {
-    res.render('home');
-});
-app.get('/about', (req, res) => {
-    res.render('about');
-});
-app.get('/contact', (req, res) => {
-    res.render('contact');
-});
+app.use('/', homeRouter);
+app.use('/', aboutRouter);
+app.use('/', contactRouter);
+app.use('/', projectsRouter);
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
