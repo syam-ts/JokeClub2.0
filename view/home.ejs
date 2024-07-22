@@ -1,40 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://play-lh.googleusercontent.com/zp9s9mkvcK3rkl9cgcGdC3oAfo53-SCshBOYUytdrTMy6Vtpht16l6yA9jZOHt5-ip4" type="image/x-icon" id="favicon"/>
-    <link href="/index.css" rel="stylesheet"/>
-    <script src="./dist/index.js" ></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Home of Joke Club 2.0</title>
-</head>
-<body class="flex items-center justify-center h-screen bg-gray-100">
-   <nav>
-    <header class="fixed h-16 inset-x-0 top-0 z-30 mx-auto rounded-full w-full max-w-screen-2xl border bg-white py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg ">
-        <div class="px-4">
-            <div class="flex items-center justify-between">
-                <div class="flex shrink-0">
-                    <a aria-current="page" class="flex items-center" href="/">
-                        <img class="h-12 w-12 rounded-full animate-spin  m-auto"  viewBox="0 0 24 0" src="https://www.shutterstock.com/image-vector/melting-smile-dripping-icon-yellow-260nw-1600649833.jpg" alt="jokeClub-Logo">
-                        <p class="sr-only">jokeClub-V-2.0</p>
-                    </a>   
-                </div>
-                <div class=" md:flex md:items-center md:justify-center md:gap-5">
-                    <a class=" rounded-lg px-12 py-1 text-sm font-thin text-gray-900 hover:bg-black hover:text-white" href="/home"><span>Home</span> </a>
-                    <a class=" rounded-lg px-12 py-1 text-sm font-thin text-gray-900 hover:bg-black hover:text-white" href="#"><span>Projects</span> </a>
-                    <a class=" rounded-lg px-12 py-1 text-sm font-thin text-gray-900 hover:bg-black hover:text-white about"  href="/about"><span>About</span> </a>
-                    <a class=" rounded-lg px-12 py-1 text-sm font-thin text-gray-900 hover:bg-black hover:text-white  contact" href="/contact"><span>Contact</span> </a>
-                    <a class=" rounded-lg px-12 py-1 text-sm font-thin text-gray-900 hover:bg-white hover:text-white dark" id="darkMode"><img class="h-5 w-5" src="https://cdn-icons-png.flaticon.com/128/12377/12377255.png" alt=""> </a>
-                </div>
-                <div class="flex items-center justify-end gap-3">
-                    <a class="inline-flex items-center justify-center rounded-xl bg-yellow-300 px-3 py-2 text-sm font-semibold text-black shadow-sm transition-all duration-150 hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" href="/login">Login</a>
-                </div>
-            </div>
-        </div>
-    </header>
-   </nav>
-   <main>
+<%- include('header') %>
    <div class="main relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 mt-16 transition duration-300 ease-in-out hover:scale-110">
         <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96">
                 <img src="https://w0.peakpx.com/wallpaper/112/413/HD-wallpaper-happy-smile-black-yellow.jpg"alt="card-image"
