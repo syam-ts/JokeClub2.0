@@ -1,4 +1,4 @@
-const router = require("express").Router();
+var router = require("express").Router();
 var passport = require("passport");
 
 router.get("/login/success", (req, res) => {
