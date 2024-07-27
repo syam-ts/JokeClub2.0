@@ -1,15 +1,18 @@
 import express from 'express';
 import path from 'path';
-import * as dotenv from 'dotenv';
+require('dotenv').config();
+
 import passport from 'passport';
 import cookieSession from 'cookie-session';
+ 
 
-dotenv.config();
+
+
 
 const homeRouter = require('../routes/home');
 const aboutRouter = require('../routes/about');
 const contactRouter = require('../routes/contact');
-const app = express();
+var app = express();
 const port = 3000;
 
 app.set('view engine', 'ejs');
