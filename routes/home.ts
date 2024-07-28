@@ -32,7 +32,7 @@ router.get('/auth/google',
     })
   );
 
-router.get('/protected' , (req, res) => {
+router.get('/protected' , isLoggedIn, (req, res) => {
   res.send(`Hello ${req.user.displayName}`);
 });
 app.get('/logout', (req, res) => {
