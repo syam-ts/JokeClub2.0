@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const jokeInterface = document.getElementById('jokeInterface') as HTMLElement;
     const loadJokeButton = document.getElementById('loadJoke') as HTMLButtonElement;
+    const loadButton = document.getElementById('loadButton') as HTMLButtonElement;
+    const jOButton = document.getElementById('jOButton') as HTMLButtonElement;
+    const lFButton = document.getElementById('lFButton') as HTMLButtonElement;
   
     loadJokeButton.addEventListener('click', () => {
       fetch('https://official-joke-api.appspot.com/random_joke')
@@ -57,9 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const dark = document.getElementsByClassName('dark');
       const jokes = document.getElementsByClassName('jokes');
       const jo = document.getElementsByClassName('jo');
-    
       let isDarkMode = false;
-  
+      setTimeout(() => {
+        console.log('worked in each 6 seconds')
+      }, 6000);
   if (darkMode) {
     darkMode.addEventListener('click', () => {
       isDarkMode = !isDarkMode;
@@ -119,3 +123,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
    }
   });
+
