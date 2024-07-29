@@ -11,6 +11,7 @@ passport.use(new GoogleStrategy({
   passReqToCallback: true,
 },
 function(request, accessToken, refreshToken, profile, done) {
+  request.session.user = profile.name.givenName;
   return done(null, profile);
 }));
 

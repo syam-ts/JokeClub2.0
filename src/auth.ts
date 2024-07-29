@@ -3,7 +3,8 @@ var passport = require('passport');
 
 router.get('/login/success', (req, res) => {
   if (req.user) {
-    res.render('home');
+    const userName = req.user.given_name;
+    res.render('home', { userName: userName });
     console.log(req.user)
   } else {
     res.status(403).json({ error: true, message: 'Not Authorized' });
@@ -22,14 +23,15 @@ router.get(
     failureRedirect: '/login/failed',
   }),
   (req, res) => {
-    res.redirect('/home');
-    console.log('User loggedIn')
+    console.log(req.session.passport.user.given_name)
+    const userName = req.session.passport ? req.session.passport.user.given_name : '';
+    res.render('home',{
+      userName : userName,
+      log : 'logout'
+    });
+    console.log('User loggedIn')   
   }
 );
 
-router.get('/logout', (req, res) => {
-  req.logout();
-  res.redirect(process.env.CLIENT_URL);
-});
 
 module.exports = router;

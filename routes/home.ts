@@ -16,9 +16,21 @@ function isLoggedIn(req, res, next) {
   req.user ? next() : res.sendStatus(401);
 };
 
+router.get('/logout', (req, res, next) => {
+  req.logout((err) => {
+    if (err) {
+      return next(err);
+    }
+    res.render('home', {
+      userName : ''
+    });
+  });
+});
 
 router.get('/home', (req, res) => {
-    res.render('home');
+    res.render('home',{
+      userName : ''
+    });
 });
 
 // router.get('/auth/google',passport.authenticate('google',
