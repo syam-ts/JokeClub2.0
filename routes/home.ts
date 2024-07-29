@@ -33,16 +33,16 @@ router.get('/home', (req, res) => {
     });
 });
 
-// router.get('/auth/google',passport.authenticate('google',
-//    { scope: [ 'email', 'profile' ] })
-// );
+router.get('/auth/google',passport.authenticate('google',
+   { scope: [ 'email', 'profile' ] })
+);
 
-  // router.get('/auth/google/callback',
-  //   passport.authenticate( 'google', {
-  //     successRedirect: '/protected',
-  //     failureRedirect: '/auth/google/failure'
-  //   })
-  // );
+  router.get('/auth/google/callback',
+    passport.authenticate( 'google', {
+      successRedirect: '/protected',
+      failureRedirect: '/auth/google/failure'
+    })
+  );
 
 router.get('/protected' , isLoggedIn, (req, res) => {
   res.send(`Hello ${req.user.displayName}`);
