@@ -4,7 +4,7 @@ var passport = require('passport');
 router.get('/login/success', (req, res) => {
   if (req.user) {
     const userName = req.user.given_name;
-    res.render('home', { userName: userName });
+    res.render('home', { userName: userName,logHref : '/auth/google', log : 'Logout' });
     console.log(req.user)
   } else {
     res.status(403).json({ error: true, message: 'Not Authorized' });
@@ -27,7 +27,7 @@ router.get(
     const userName = req.session.passport ? req.session.passport.user.given_name : '';
     res.render('home',{
       userName : userName,
-      log : 'logout'
+      log : ''
     });
     console.log('User loggedIn')   
   }

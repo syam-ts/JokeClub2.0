@@ -22,14 +22,18 @@ router.get('/logout', (req, res, next) => {
       return next(err);
     }
     res.render('home', {
-      userName : ''
+      userName : '', 
+      logHref : '/logout',
+      log : 'Login'
     });
   });
 });
 
 router.get('/home', (req, res) => {
     res.render('home',{
-      userName : ''
+      userName : '',
+      logHref : '/#',
+      log: 'Login'
     });
 });
 

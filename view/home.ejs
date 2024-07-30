@@ -1,5 +1,8 @@
 <%- include('header') %>
-<span class="absolute top-0 right-0 mt-12 mr-12 text-end font-bold"><%= userName %> </span>
+<span class="font-bold absolute top-0 right-0 mt-12 mr-12 text-end ">Hi <%= userName %> </span>
+<a class="inline-flex absolute top-0 right-0 mt-24 mr-12 text-end  items-center justify-center rounded-xl bg-yellow-300 px-3 py-2 text-sm font-semibold text-black shadow-sm transition-all duration-150 hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" href="<%= logHref %>"><%= log %></a>
+
+
    <div class="main relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96 mt-16 transition duration-300 ease-in-out hover:scale-110">
         <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96">
                 <img src="https://w0.peakpx.com/wallpaper/112/413/HD-wallpaper-happy-smile-black-yellow.jpg"alt="card-image"
