@@ -32,7 +32,7 @@ router.get('/logout', (req, res, next) => {
 router.get('/home', (req, res) => {
     res.render('home',{
       userName : '',
-      logHref : '/#',
+      logHref : '/auth/google',
       log: 'Login'
     });
 });

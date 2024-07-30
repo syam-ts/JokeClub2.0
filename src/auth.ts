@@ -27,7 +27,8 @@ router.get(
     const userName = req.session.passport ? req.session.passport.user.given_name : '';
     res.render('home',{
       userName : userName,
-      log : ''
+      logHref:'/logout',
+      log : 'Logout'
     });
     console.log('User loggedIn')   
   }
